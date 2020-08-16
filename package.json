@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/broussardmichael/circularLinkedList#readme",
   "dependencies": {
-    "linkedlist": "^1.0.1"
+    "linkedlist": "file:../linkedList"
   }
 }
