@@ -1,0 +1,25 @@
+{
+  "name": "circularlinkedlist",
+  "version": "1.0.0",
+  "description": "expansion of linkedlist",
+  "main": "circularLinkedList.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/broussardmichael/circularLinkedList.git"
+  },
+  "keywords": [
+    "circularLinkedList"
+  ],
+  "author": "Michael Broussard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/broussardmichael/circularLinkedList/issues"
+  },
+  "homepage": "https://github.com/broussardmichael/circularLinkedList#readme",
+  "dependencies": {
+    "linkedlist": "^1.0.1"
+  }
+}
