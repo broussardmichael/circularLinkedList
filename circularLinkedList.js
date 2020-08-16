@@ -1,4 +1,4 @@
-let mod = module.exports = (function(){
+module.exports = (function(){
     let module = require("../linkedList/linkedList");
     let linkedList = module();
 
