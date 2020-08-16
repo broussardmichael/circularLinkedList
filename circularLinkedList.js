@@ -35,13 +35,12 @@ module.exports = (function(){
             list.head = null;
         } else {
             let nextNode = node.nextNode, prevNode = node.prevNode;
-            if (node.data === list.head.data) {
+            if (node.data === list.head.data)
                 list.head = nextNode;
-            } else {
-                prevNode = node.prevNode;
-                prevNode.nextNode = nextNode;
-                nextNode.prevNode = prevNode;
-            }
+
+            prevNode = node.prevNode;
+            prevNode.nextNode = nextNode;
+            nextNode.prevNode = prevNode;
         }
         node = null;
         delete node;
@@ -90,5 +89,6 @@ module.exports = (function(){
         circularLinkedList = new CircularLinkedList(list.head);
         return circularLinkedList;
     }
+
     return circularLinkedList;
 });
