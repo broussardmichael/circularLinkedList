@@ -1,6 +1,6 @@
 module.exports = (function(){
     let module = require("../linkedList/linkedList");
-    let linkedList = module();
+    let linkedList = new module;
 
     class CircularLinkedList {
         constructor(head = null) {
@@ -10,8 +10,6 @@ module.exports = (function(){
             this.isTheNodeInTheListByData = isTheNodeInTheListByData;
         }
     }
-
-    let circularLinkedList = {}
 
     function validateNodeArgumentForOperations(node) {
         if (node == null)
@@ -80,15 +78,14 @@ module.exports = (function(){
         return found
     }
 
-    circularLinkedList.createCircularLinkedListFromDataArray = function (dataArray){
+    return {
+        createCircularLinkedListFromDataArray: function (dataArray){
         let list = linkedList.createLinkedListFromDataArray(dataArray);
         let tailNode = list.getTailNode();
         list.head.prevNode = tailNode;
         tailNode.nextNode = list.head;
 
-        circularLinkedList = new CircularLinkedList(list.head);
-        return circularLinkedList;
+        return new CircularLinkedList(list.head);
+        }
     }
-
-    return circularLinkedList;
 });
